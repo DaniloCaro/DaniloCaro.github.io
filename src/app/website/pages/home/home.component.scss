@@ -1,0 +1,43 @@
+.home-container {
+  width: 100%;
+  overflow: hidden;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 38px 30px;
+  &::before {
+    content: '';
+    position: absolute;
+    width: 419.11px;
+    height: 419.11px;
+    left: 170px;
+    top: 100px;
+    /* circle */
+    background: conic-gradient(from 180deg at 50% 50%, #00FFE0 0deg, #7000FF 360deg);
+    filter: blur(350px);
+    border-radius: 50%;
+    transform: rotate(-108.84deg);
+    overflow: hidden;
+  }
+    &::after {
+    content: '';
+    position: absolute;
+    width: 1468px;
+    height: 903px;
+    left: 0px;
+    top: 1486px;
+    /* circle */
+    background: conic-gradient(from 180deg at 50% 50%, #00FFE0 0deg, #7000FF 360deg);
+    filter: blur(350px);
+    overflow: hidden;
+  }
+}
+.home__grid--top{
+  width: 130px;
+  margin: 0 auto;
+}
+::ng-deep.home__grid--top::ng-deep.social-media-grid::ng-deep.social-media > img {
+  width: 30px;
+}
