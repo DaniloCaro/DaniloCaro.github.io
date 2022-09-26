@@ -1,0 +1,22 @@
+header > nav {
+  width: calc(100% - 60px);
+  margin:38px 30px 50px 30px;
+}
+nav > ul {
+  display: none; // Change this to display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav > ul > li {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-right: 67px;
+}
+.home__grid--top{
+  width: 156px;
+  margin: 0 auto 0px auto;
+}

@@ -1,7 +1,5 @@
 <div class="experience">
   <h2> {{ titleExperience }} </h2>
-  <app-experience-card></app-experience-card>
-  <app-experience-card></app-experience-card>
-  <app-experience-card></app-experience-card>
+  <app-experience-card [exp]="exps" *ngFor="let exps of experiences"></app-experience-card>
 </div>
 

@@ -1,0 +1,15 @@
+{
+  "id": 1,
+  "img": "./assets/img/CRUD-Estudiante.webp",
+  "title": "Consumo de API Estudiantes",
+  "description": "CRUD sobre datos basicos de estudiantes.",
+  "skills": [
+      "Bootstrap",
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "Angular",
+      "NodeJS"
+  ],
+  "link": "https://seminario-crud.netlify.app/"
+}

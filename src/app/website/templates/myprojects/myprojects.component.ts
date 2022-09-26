@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+// Services
+import { ProjectsService } from '../../services/projects.service';
+// Interfaces
+import { ProjectInterface } from '../../interface/project.interface';
 
 @Component({
   selector: 'app-myprojects',
@@ -7,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyprojectsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _projectsService:ProjectsService) { }
+
+  projects:ProjectInterface[]=[]
 
   ngOnInit(): void {
+    this.projects = this._projectsService.getProjects();
   }
-
 }

@@ -7,12 +7,10 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ExperienceCardComponent implements OnInit {
 
-  @Input() nameWork: string='Work';
-  @Input() imgWork: string = 'assets/img/missing-image.svg';
+  @Input() exp:any = {}
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
 }

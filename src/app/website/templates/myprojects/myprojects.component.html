@@ -1,11 +1,6 @@
 <div class="myprojects">
   <h3>Últimos trabajos</h3>
-  <app-project-img></app-project-img>
-  <app-project-info></app-project-info>
-  <app-project-img></app-project-img>
-  <app-project-info></app-project-info>
-  <app-project-img></app-project-img>
-  <app-project-info></app-project-info>
+  <app-project-info [proj]="projectItem" *ngFor="let projectItem of projects"></app-project-info>
 </div>
 
 

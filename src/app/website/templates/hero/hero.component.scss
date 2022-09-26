@@ -1,8 +1,10 @@
 .hero {
-  width: 100%;
+  width: calc(100% - 60px);
+  min-height: calc(100vh - 123px);
   display: flex;
   flex-direction: column;
-  margin-bottom: 82px;
+  // justify-content: space-evenly;
+  margin:0px 30px 0px 30px;
   &.hero__info , .hero__img{
     width: 100%;
   }
@@ -35,10 +37,11 @@
     line-height: 36px;
     letter-spacing: 0.085em;
     -webkit-text-stroke: 1px #0EE6B7;
-    color: trasparent;
   }
 }
 .hero__img {
+  width: 300px;
+  height: 300px;
   display: flex;
   justify-content: center;
 }

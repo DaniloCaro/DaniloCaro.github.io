@@ -12,15 +12,18 @@ export class SocialMediaGridComponent implements OnInit {
   public arregloIconos:Social[] = [
     {
       name: 'linkedin',
-      link: './assets/img/linkedin.svg',
+      img:'./assets/img/linkedin.svg',
+      link: 'https://www.linkedin.com/in/danilocaro/',
     },
     {
       name: 'github',
-      link: './assets/img/github.svg',
+      img: './assets/img/github.svg',
+      link: 'https://github.com/DaniloCaro',
     },
     {
       name: 'youtube',
-      link: './assets/img/youtube.svg',
+      img: './assets/img/youtube.svg',
+      link: 'https://www.youtube.com/channel/UC4x7STAg_4593TcXzBCbfNw',
     },
   ]
 

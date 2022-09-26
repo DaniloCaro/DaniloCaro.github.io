@@ -1,0 +1,46 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  & > .home__grid--bottom{
+    width: 186px;
+    margin: 0 auto 0px auto;
+  }
+  & > p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin:34px 0px 26px 0px;
+  }
+  & > h3 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+    margin:71px 0px 45px 0px;
+  }
+  & > a {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #0EE6B7;
+    text-align: center;
+  }
+  & > span {
+    display: block;
+    min-width: 315px;
+    width: 80%;
+    height: 1px;
+    position: relative;
+    background-color: #ffffff;
+    margin-top: 76px;
+  }
+}

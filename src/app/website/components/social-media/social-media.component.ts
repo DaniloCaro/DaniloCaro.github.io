@@ -9,8 +9,9 @@ import { Social } from '../../interface/social.interface'
 export class SocialMediaComponent implements OnInit {
 
   @Input() socialMedia: Social = {
-    name: '',
-    link: ''
+    name: '404',
+    img:'./assets/img/missing-image.svg',
+    link: '404'
   }
 
   constructor() { }

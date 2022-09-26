@@ -1,8 +1,11 @@
+<div class="project-img">
+  <img [src]="proj.img" alt="">
+</div>
 <div class="project-info">
-  <h3>{{ project.name }}</h3>
-  <p>{{ project.description }}</p>
+  <h3>{{ proj.name }}</h3>
+  <p>{{ proj.description }}<br>{{ proj.skills }}</p>
   <div class="project-info__grid-arrow">
-    <a [href]="project.link">Ver proyecto</a>
+    <a [href]="proj.link" target="_blank">Ver proyecto</a>
     <div class="project__arrow">
       <span></span>
     </div>
