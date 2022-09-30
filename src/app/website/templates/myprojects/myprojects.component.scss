@@ -1,7 +1,12 @@
-.myprojects {
+.my-projects {
   width: calc(100% - 60px);
   margin:0px 30px 0px 30px;
-  & > h3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  & > .my-projects__title {
+    width: 100%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
@@ -9,5 +14,35 @@
     line-height: 30px;
     color: #FFFFFF;
     margin:61px 0px 38px 0px;
+  }
+}
+@media screen and (min-width: 700px) {
+  .my-projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: baseline;
+  }
+  .my-projects__title {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .my-projects {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .my-projects__title {
+    grid-column-end: 4;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .my-projects {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+  .my-projects__title {
+    grid-column-end: 5;
   }
 }

@@ -1,6 +1,8 @@
 // Modules
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { NgxTypedJsModule } from 'ngx-typed-js';
 // Services
 import { ExperiencesService } from './services/experiences.service';
 import { ProjectsService } from './services/projects.service';
@@ -16,6 +18,7 @@ import { ProjectInfoComponent } from './components/project-info/project-info.com
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { ContactComponent } from './templates/contact/contact.component';
+import { MenuComponent } from './components/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,13 @@ import { ContactComponent } from './templates/contact/contact.component';
     ProjectInfoComponent,
     FooterComponent,
     HeaderComponent,
-    ContactComponent
+    ContactComponent,
+    MenuComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
+    NgxTypedJsModule
   ],
   providers: [
     ExperiencesService,

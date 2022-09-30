@@ -1,4 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
+//Interface
+import { ProjectApiInterface } from './../../interface/project-api.interface';
 
 @Component({
   selector: 'app-project-info',
@@ -9,7 +11,7 @@ export class ProjectInfoComponent implements OnInit {
 
   constructor() { }
 
-  @Input() proj:any ={}
+  @Input() proj!:ProjectApiInterface;
 
   ngOnInit(): void {
   }

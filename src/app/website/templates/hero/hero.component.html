@@ -1,10 +1,15 @@
-<div class="hero">
+<div class="hero" id="hero">
   <div class="hero__info">
     <p>!Hola¡</p>
     <h1>Soy<br> Danilo Caro,</h1>
-    <h2>frontend developer.</h2>
+    <div class="hero__subtitle">
+      <ngx-typed-js [backSpeed]="50" [backDelay]="1000" [startDelay]="0" [loop]="true" [typeSpeed]="100" [strings]="['Frontend developer', 'Software engineer', 'Angular developer']">
+        <h2 class="typing"></h2>
+      </ngx-typed-js>
+    </div>
   </div>
   <div class="hero__img">
     <img src="./assets/img/hero-img(max-600).webp" alt="Danilo Caro photo">
   </div>
 </div>
+

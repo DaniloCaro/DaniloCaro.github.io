@@ -1,13 +1,33 @@
-<div class="project-img">
-  <img [src]="proj.img" alt="">
-</div>
-<div class="project-info">
-  <h3>{{ proj.name }}</h3>
-  <p>{{ proj.description }}<br>{{ proj.skills }}</p>
-  <div class="project-info__grid-arrow">
-    <a [href]="proj.link" target="_blank">Ver proyecto</a>
-    <div class="project__arrow">
-      <span></span>
+<ng-container *ngIf="proj !== null && proj !== undefined">
+  <div class="project-card">
+    <div class="project-img">
+      <img [src]="proj.img" alt="" />
+      <h3>{{ proj.title }}</h3>
+    </div>
+    <div class="project-info">
+      <!-- <h3>{{ proj.title }}</h3> -->
+      <details>
+        <summary>Descripción</summary>
+        {{ proj.description }}
+      </details>
+      <details>
+        <summary>Skills</summary>
+        {{ proj.skills.join(", ") }}
+      </details>
+      <div class="project-info__grid-icons">
+        <a href="" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/img/github.svg" alt="" />
+          <span>Ver código</span>
+        </a>
+        <a [href]="proj.link" target="_blank" rel="noopener noreferrer">
+          <img src="./assets/img/web-external.svg" alt="" />
+          <span>Ver proyecto</span>
+        </a>
+        <!-- <a [href]="proj.link" target="_blank">Ver proyecto</a>
+        <div class="project__arrow">
+          <span></span>
+        </div> -->
+      </div>
     </div>
   </div>
-</div>
+</ng-container>

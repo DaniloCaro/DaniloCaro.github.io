@@ -11,7 +11,7 @@ import { Experience } from '../../interface/experience.interface';
 })
 export class ExperienceComponent implements OnInit {
 
-  @Input() titleExperience = 'Experiencia';
+  @Input() titleExperience = 'Educación';
 
   experiences:Experience[]=[]
 

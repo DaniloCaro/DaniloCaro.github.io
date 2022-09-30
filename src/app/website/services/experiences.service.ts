@@ -8,17 +8,9 @@ export class ExperiencesService {
 
   private experiences: Experience[] = [
     {
-      name: 'Frontend Developer',
-      img: 'assets/img/missing-image.svg',
+      name: 'Ingeniería de Software - 2022',
+      img: 'assets/img/udc.webp',
     },
-    {
-      name: 'Backend Developer',
-      img: 'assets/img/missing-image.svg',
-    },
-    {
-      name: 'FullStack Developer',
-      img: 'assets/img/missing-image.svg',
-    }
   ]
   constructor() {
   }

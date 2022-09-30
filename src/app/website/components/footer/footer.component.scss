@@ -1,10 +1,12 @@
-footer > h2 {
-  font-family: 'Poppins';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 18px;
-  color: #FFFFFF;
-  text-align: center;
-  margin: 53px 0px 45px 0px;
+footer {
+  &>h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 53px 0px 45px 0px;
+  }
 }
