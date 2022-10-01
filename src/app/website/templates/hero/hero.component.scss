@@ -3,7 +3,7 @@
   min-height: calc(100vh - 123px);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   margin:0px 30px 0px 30px;
   &.hero__info , .hero__img{
     width: 100%;
@@ -16,8 +16,9 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 36px;
+    // font-size: 24px;
+    font-size: min(max(24px, 4vw), 64px);
+    // line-height: 36px;
     color: #0EE6B7;
     margin-bottom: 3px;
   }
@@ -25,7 +26,8 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 44px;
+    // font-size: 44px;
+    font-size: min(max(44px, 4vw), 64px);
     line-height: 46px;
     color: #FFFFFF;
   }
@@ -35,6 +37,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
+    // font-size: min(max(24px, 4vw), 72px);
     line-height: 36px;
     letter-spacing: 0.085em;
     -webkit-text-stroke: 1px #0EE6B7;
@@ -48,11 +51,69 @@
   height: 300px;
   display: flex;
   justify-content: center;
+  z-index: -1;
 }
-.hero__img > img {
+.hero__img img {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #000;
+  // border-radius: 50%;
+  border-radius: 33% 67% 84% 16% / 55% 31% 69% 45% ;
+  border: 1px solid #000;
+  box-shadow: 0px 0px 30px rgba(0, 238, 255, 0.5);
+}
+@media screen and (min-width: 700px) {
+  .hero {
+    width: 90%;
+    min-height: calc(100vh - 55px);
+    margin:0 5% 0 5%;
+    flex-direction: row;
+    align-items: center;
+    & > .hero__info {
+      margin-bottom: 0;
+      width: 60%;
+      & h2 {
+        font-size: 48px;
+      }
+    }
+    & > .hero__img {
+      width: 40%;
+    }
+    & .hero__subtitle {
+      min-height: 124px;
+      margin-top: 10px;
+    }
+  }
+}
+@media screen and (min-width: 900px) {
+  .hero__img {
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    & img {
+      width: 450px;
+      height: 450px;
+    }
+  }
+}
+@media screen and (min-width: 1440px) {
+  .hero {
+    & > .hero__info {
+      & h1 {
+        line-height: 65px;
+      }
+      & h2 {
+        font-size: 72px;
+      }
+      & .hero__subtitle {
+        min-height: 216px;
+      }
+    }
+  }
+  .hero__img {
+    & img {
+      width: 500px;
+      height: 500px;
+    }
+  }
 }

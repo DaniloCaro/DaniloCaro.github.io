@@ -23,9 +23,18 @@ export class MyprojectsComponent implements OnInit {
     // Objeto de prueba
     this.projects = this._projectsService.getProjects();
     // Objeto de la API
-    this._projectsService.getProjectsApi().subscribe(data => {
-      const descData = data.sort((a, b) => (a > b) ? 1 : -1);// Ordena los proyectos de la API por fecha de creación
-      this.projectsApi = descData;
+    // this._projectsService.getProjectsApi().subscribe(data => {
+    //   const descData = data.sort((a, b) => (a > b) ? 1 : -1);// Ordena los proyectos de la API por fecha de creación
+    //   this.projectsApi = descData;
+    // });
+    this._projectsService.getProjectsApi().subscribe({
+      next: (data) => {
+        const descData = data.sort((a, b) => (a > b) ? 1 : -1);// Ordena los proyectos de la API por fecha de creación
+        this.projectsApi = descData;
+      },
+      error: (error) => {
+        console.log(error);
+      }
     });
   }
 }
