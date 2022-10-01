@@ -1,0 +1,3 @@
+[build]
+  publish = "dist/portafolio-hackathon"
+  command = "ng build --prod"
