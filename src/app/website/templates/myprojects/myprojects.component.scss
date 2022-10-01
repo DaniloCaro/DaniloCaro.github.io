@@ -22,18 +22,20 @@
     grid-template-columns: 1fr 1fr;
     justify-items: center;
     align-items: baseline;
-  }
-  .my-projects__title {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    & > .my-projects__title {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      font-size: 36px;
+    }
   }
 }
 @media screen and (min-width: 1024px) {
   .my-projects {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-  .my-projects__title {
-    grid-column-end: 4;
+    & > .my-projects__title {
+      grid-column-end: 4;
+      font-size:36px;
+    }
   }
 }
 @media screen and (min-width: 1440px) {
@@ -41,8 +43,8 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 1920px;
     margin: 0 auto;
-  }
-  .my-projects__title {
-    grid-column-end: 5;
+    & > .my-projects__title {
+      grid-column-end: 5;
+    }
   }
 }
