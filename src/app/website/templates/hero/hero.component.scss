@@ -31,16 +31,18 @@
     line-height: 46px;
     color: #FFFFFF;
   }
-  & h2 {
+  & .typing {
     display: inline;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
+    color: #FFFFFF;
     // font-size: min(max(24px, 4vw), 72px);
     line-height: 36px;
     letter-spacing: 0.085em;
     -webkit-text-stroke: 1px #0EE6B7;
+    text-shadow: #0EE6B7 0 0 10px;
   }
   & .hero__subtitle {
     min-height: 71px;
