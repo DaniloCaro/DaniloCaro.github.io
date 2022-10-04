@@ -13,6 +13,7 @@
 }
 @media screen and (min-width: 700px) {
   .experience {
+    // width: calc(50% - 60px);
     & h2 {
       font-size: 36px;
     }

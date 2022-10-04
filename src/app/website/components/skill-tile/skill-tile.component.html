@@ -1,0 +1,6 @@
+<ng-container *ngIf="skillsReceptor !== null && skillsReceptor !== undefined">
+  <div class="skill-tile" [style.box-shadow]="skillsReceptor.color">
+    <img class="skill-tile__image" [src]="skillsReceptor.img" [alt]="skillsReceptor.name">
+    <h3 class="skill-tile__title">{{ skillsReceptor.name }}</h3>
+  </div>
+</ng-container>

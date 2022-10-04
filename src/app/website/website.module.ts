@@ -19,6 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './templates/header/header.component';
 import { ContactComponent } from './templates/contact/contact.component';
 import { MenuComponent } from './components/menu/menu.component';
+import { SkillTileComponent } from './components/skill-tile/skill-tile.component';
+import { MyskillsComponent } from './templates/myskills/myskills.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { MenuComponent } from './components/menu/menu.component';
     HeaderComponent,
     ContactComponent,
     MenuComponent,
+    SkillTileComponent,
+    MyskillsComponent,
   ],
   imports: [
     BrowserModule,
