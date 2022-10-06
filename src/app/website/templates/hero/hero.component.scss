@@ -1,5 +1,6 @@
 .hero {
   width: calc(100% - 60px);
+  max-width: 1800px;
   min-height: calc(100vh - 123px);
   display: flex;
   flex-direction: column;
@@ -118,5 +119,10 @@
       width: 500px;
       height: 500px;
     }
+  }
+}
+@media screen and (min-width: 1800px) {
+  .hero {
+    margin:0 auto 0 auto;
   }
 }
