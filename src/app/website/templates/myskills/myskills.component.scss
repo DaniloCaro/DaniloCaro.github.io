@@ -1,19 +1,10 @@
 .myskills {
-  width: calc(100% - 60px);
-  margin:0px 30px 0px 30px;
+  width: 100%;
+  margin: 0px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  // display: flex;
-  // flex-direction: row;
-  // overflow-x: scroll;
-  // overflow-x: scroll;
-  // align-items: center;
-  // display: grid;
-  // grid-template-columns: 1fr 1fr;
-  // &::-webkit-scrollbar {
-  //   display: none;
-  // }
+  gap: 10px;
   & .myskills__title {
     width: 100%;
     font-family: 'Poppins';
@@ -29,7 +20,6 @@
 }
 @media screen and (min-width: 600px) {
   .myskills {
-    // width: calc(50% - 60px);
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
     & .myskills__title {
@@ -47,7 +37,7 @@
 }
 @media screen and (min-width: 800px) {
   .myskills {
-    // width: calc(50% - 60px);
+    margin: 0px;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     & .myskills__title {
@@ -56,8 +46,9 @@
     }
   }
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 900px) {
   .myskills {
+    width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     & .myskills__title {
       grid-column-start: 1;
@@ -65,14 +56,19 @@
     }
   }
 }
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1050px) {
   .myskills {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns:repeat(4 ,1fr);
     height: auto;
     overflow-y: hidden;
     & .myskills__title {
       grid-column-start: 1;
       grid-column-end: 5;
     }
+  }
+}
+@media screen and (min-width: 1300px) {
+  .myskills {
+    gap: 40px;
   }
 }

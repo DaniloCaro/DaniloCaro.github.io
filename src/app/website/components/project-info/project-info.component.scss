@@ -2,7 +2,6 @@
   width: 315px;
   height: auto;
   border-radius: 10px;
-  // background-color: #000;
   background: linear-gradient(180deg, #171A1B 0%, rgba(23, 26, 27, 0) 100%);
   margin-bottom: 61px;
   transition: all 0.5s ease;
@@ -58,7 +57,6 @@
     line-height: 25px;
     padding: 0 20px;
     margin-bottom: 30px;
-    // white-space: pre-line;
   }
   & summary {
     cursor: pointer;
@@ -77,14 +75,12 @@
     padding: 0 0 20px 0;
   }
   & > .project-info__grid-icons > a {
-    // width: 50%;
     width: 70px;
     height: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // padding: 5px 0px;
     -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
@@ -98,64 +94,25 @@
       transition: all .4s ease-in-out;
       border: 1px solid #0EE6B7;
       border-radius: 50px;
-      // background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
       box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
       background-size: 300% 100%;
-      transform: scale(1.2);
     }
   }
   & > .project-info__grid-icons > a > img {
     width: 24px;
     height: 24px;
-    // filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
-    // margin: 0 auto;
   }
   & > .project-info__grid-icons > a > span {
-    // filter: invert(42%) sepia(93%) saturate(1352%) hue-rotate(87deg) brightness(119%) contrast(119%);
     color: #fff;
     font-size: 10px;
     text-align: center;
   }
-  // & > .project-info__grid-arrow > .project__arrow {
-  //   width: 50%;
-  //   display: flex;
-  //   align-items: center;
-  //   position: relative;
-  // }
 }
-// .project__arrow > span {
-//   display: block;
-//   width: 106px;
-//   height: 3px;
-//   position: relative;
-//   background-color: #0EE6B7;
-//   &::before {
-//     content: '';
-//     display: block;
-//     width: 20px;
-//     height: 3px;
-//     background-color: #0EE6B7;
-//     transform: rotate(45deg) translateY(-7px) translateX(-2px);
-//     position: absolute;
-//     right: 0;
-//   }
-//   &::after {
-//     content: '';
-//     display: block;
-//     width: 20px;
-//     height: 3px;
-//     background-color: #0EE6B7;
-//     transform: rotate(-45deg) translateY(7px) translateX(-2px);
-//     position: absolute;
-//     right: 0;
-//   }
-// }
 @media screen and (min-width: 1440px) {
-  // Efecto hover moderno para card
   .project-card {
     filter: brightness(0.7);
     &:hover {
-      transform: scale(1.05);
+      transform: translateY(-10px);
       box-shadow: 0px 0px 10px rgba(255, 255, 255, 1);
       filter: brightness(1);
     }

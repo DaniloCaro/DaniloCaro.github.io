@@ -3,14 +3,24 @@
   height: 30px;
 }
 ::ng-deep.home__grid--bottom::ng-deep.social-media-grid::ng-deep.social-media > a > img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
+}
+.container {
+  width: calc(100% - 60px);
+  max-width: 1456px;
+  margin: 0px 30px;
 }
 @media screen and (min-width: 800px) {
   .grid {
     display: flex;
-    justify-content: space-evenly;
-    max-width: 1800px;
+    justify-content: space-between;
+    max-width: 1456px;
     margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1516px) {
+  .container {
+    margin: 0px auto;
   }
 }
