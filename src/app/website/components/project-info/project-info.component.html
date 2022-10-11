@@ -1,11 +1,17 @@
 <ng-container *ngIf="proj !== null && proj !== undefined">
   <div class="project-card">
     <div class="project-img">
-      <img [src]="proj.img" alt="" />
-      <h3>{{ proj.title }}</h3>
+      <img [src]="proj.img" [alt]="proj.title" />
+      <!-- <h3>{{ proj.title }}</h3> -->
     </div>
     <div class="project-info">
-      <details>
+      <h3>{{ proj.title }}</h3>
+      <p>{{ proj.description }}</p>
+      <div class="project-info__bottom">
+        <span>Status</span>
+        <span>Fecha inicio - fin</span>
+      </div>
+      <!-- <details>
         <summary>Descripción</summary>
         {{ proj.description }}
       </details>
@@ -19,7 +25,7 @@
           <img src="./assets/img/web-external.svg" alt="" />
           <span>Despliegue</span>
         </a>
-      </div>
+      </div> -->
     </div>
   </div>
 </ng-container>
