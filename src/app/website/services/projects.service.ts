@@ -115,4 +115,8 @@ export class ProjectsService {
     getProjects(): ProjectApiInterface[] {
         return this.project;
     }
+    // Obtiene un proyecto por id
+    getProject(id: number): any {
+        return this.project.find(project => project.id === id);
+    }
 }

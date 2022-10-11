@@ -1,0 +1,18 @@
+::ng-deep.home__grid--top::ng-deep.social-media-grid::ng-deep.social-media > a > img {
+  width: 30px;
+  height: 30px;
+}
+::ng-deep.home__grid--bottom::ng-deep.social-media-grid::ng-deep.social-media > a > img {
+  width: 30px;
+  height: 30px;
+}
+.container {
+  width: calc(100% - 60px);
+  max-width: 1456px;
+  margin: 0px 30px;
+}
+@media screen and (min-width: 1516px) {
+  .container {
+    margin: 0px auto;
+  }
+}

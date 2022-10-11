@@ -17,7 +17,7 @@ export class MyprojectsComponent implements OnInit {
   // Objeto de prueba
   projects:ProjectApiInterface[]=[]
   // Objeto de la API
-  projectsApi:ProjectApiInterface[]=[]
+  // projectsApi:ProjectApiInterface[]=[]
 
   ngOnInit(): void {
     // Objeto de prueba

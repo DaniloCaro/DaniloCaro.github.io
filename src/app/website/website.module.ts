@@ -22,6 +22,7 @@ import { ContactComponent } from './templates/contact/contact.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { SkillTileComponent } from './components/skill-tile/skill-tile.component';
 import { MyskillsComponent } from './templates/myskills/myskills.component';
+import { ProjectPageComponent } from './pages/project-page/project-page.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MyskillsComponent } from './templates/myskills/myskills.component';
     MenuComponent,
     SkillTileComponent,
     MyskillsComponent,
+    ProjectPageComponent,
   ],
   imports: [
     HttpClientModule,
