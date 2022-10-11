@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-// Submodules
-import { WebsiteRoutingModule } from './website/website-routing.module';
-import { SharedRoutingModule } from './shared/shared-routing.module';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'',
+    loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
+  },
+  {
+    path:'**',
+    loadChildren: () => import('./shared/shared.module').then(m => m.SharedModule)
+  }
+];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    WebsiteRoutingModule,
-    SharedRoutingModule
+    // WebsiteRoutingModule,
+    // SharedRoutingModule
   ],
   exports: [RouterModule]
 })

@@ -1,8 +1,9 @@
 // Modules
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxTypedJsModule } from 'ngx-typed-js';
+import { WebsiteRoutingModule } from './website-routing.module';
+import { CommonModule } from '@angular/common';
 // Services
 import { ExperiencesService } from './services/experiences.service';
 import { ProjectsService } from './services/projects.service';
@@ -40,9 +41,10 @@ import { MyskillsComponent } from './templates/myskills/myskills.component';
     MyskillsComponent,
   ],
   imports: [
-    BrowserModule,
     HttpClientModule,
-    NgxTypedJsModule
+    NgxTypedJsModule,
+    WebsiteRoutingModule,
+    CommonModule
   ],
   providers: [
     ExperiencesService,
