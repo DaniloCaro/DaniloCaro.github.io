@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Social } from '../../interface/social.interface'
+import { Social } from './../../interfaces/social.interface';
+
 
 @Component({
   selector: 'app-social-media',

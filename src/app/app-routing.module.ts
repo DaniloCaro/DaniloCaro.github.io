@@ -1,5 +1,11 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { ExtraOptions, RouterModule, Routes } from '@angular/router';
+
+const routerOptions: ExtraOptions = {
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled',
+  scrollOffset: [0, 70],
+};
 
 const routes: Routes = [
   {
@@ -14,9 +20,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
-    // WebsiteRoutingModule,
-    // SharedRoutingModule
+    RouterModule.forRoot(routes,routerOptions),
   ],
   exports: [RouterModule]
 })

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 // Model
-import { Social } from '../../interface/social.interface';
+import { Social } from './../../interfaces/social.interface';
 
 @Component({
   selector: 'app-social-media-grid',

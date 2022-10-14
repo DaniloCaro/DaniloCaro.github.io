@@ -1,6 +1,6 @@
 <ng-container *ngIf="proj !== null && proj !== undefined">
   <div class="project-card">
-    <a routerLink="/project/{{proj.id}}">
+    <a routerLink="/project/{{proj.title}}" routerLinkActive="active" ariaCurrentWhenActive="page">
       <div class="project-img">
         <img [src]="proj.img" [alt]="proj.title" />
       </div>
@@ -8,24 +8,9 @@
         <h3>{{ proj.title }}</h3>
         <p>{{ proj.description }}</p>
         <div class="project-info__bottom">
-          <span>Status</span>
-          <span>Fecha inicio - fin</span>
+          <span>{{proj.status}}</span>
+          <span>{{proj.date}}</span>
         </div>
-        <!-- <details>
-          <summary>Descripción</summary>
-          {{ proj.description }}
-        </details>
-        <p>Tecnologías<br>{{ proj.skills.join(", ") }}</p>
-        <div class="project-info__grid-icons">
-          <a href="https://github.com/DaniloCaro" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/img/github.svg" alt="" />
-            <span>Repositorio</span>
-          </a>
-          <a [href]="proj.link" target="_blank" rel="noopener noreferrer">
-            <img src="./assets/img/web-external.svg" alt="" />
-            <span>Despliegue</span>
-          </a>
-        </div> -->
       </div>
     </a>
   </div>

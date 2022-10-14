@@ -1,5 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 // Services
 import { ProjectsService } from './../../services/projects.service';
 // Interface
@@ -12,18 +12,19 @@ import { ProjectApiInterface } from './../../interface/project-api.interface';
 })
 export class ProjectPageComponent implements OnInit {
 
-  idProject: any={};
-  projectOnly:any = {};
+  titleProject: any={};
+  projectOnly:any ={};
 
-  constructor(private activatedRoute: ActivatedRoute, private _projectsService: ProjectsService) {
+  constructor(private activatedRoute: ActivatedRoute, private _projectsService: ProjectsService,private router: Router) {
     this.activatedRoute.params.subscribe(params => {
-      this.idProject = parseInt(params['id']);
-      console.log(typeof this.idProject);
+      this.titleProject = params['title'];
+      if (this._projectsService.getProject(this.titleProject) == undefined) {
+        this.router.navigate(['/', 'home']);
+      }
     });
   }
 
   ngOnInit(): void {
-    // this.projectOnly = this._projectsService.getProjects().filter((project) => project.id == this.idProject);
-    this.projectOnly = this._projectsService.getProject(this.idProject);
+    this.projectOnly = this._projectsService.getProject(this.titleProject);
   }
 }

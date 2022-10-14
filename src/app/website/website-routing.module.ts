@@ -9,12 +9,12 @@ const routes: Routes = [
     path: '',
     component: HomeComponent,
     children: [
-      { path: 'home', component: HomeComponent },
-      { path: '', redirectTo: 'home', pathMatch: 'full' },
+      { path: '', component: HomeComponent },
+      { path: 'home', redirectTo: '', pathMatch: 'full' },
     ]
   },
   {
-    path: 'project/:id',
+    path: 'project/:title',
     component: ProjectPageComponent,
   }
 ];
