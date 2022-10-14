@@ -31,8 +31,9 @@
     <div class="project__img">
       <picture>
           <source srcset="{{projectOnly.imgsource.max600}}" media="(max-width: 600px)">
-          <source srcset="" media="(max-width: 992px)">
-          <source srcset="" media="(max-width: 1200px)">
+          <source srcset="{{projectOnly.imgsource.max992}}" media="(max-width: 992px)">
+          <source srcset="{{projectOnly.imgsource.max1200}}" media="(max-width: 1200px)">
+          <source srcset="{{projectOnly.img}}">
         <img src="{{projectOnly.imgsource.png}}" alt="{{projectOnly.title}}">
       </picture>
     </div>

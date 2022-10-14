@@ -36,11 +36,12 @@ import { ProjectPageComponent } from './pages/project-page/project-page.componen
     HttpClientModule,
     NgxTypedJsModule,
     WebsiteRoutingModule,
-    CommonModule
+    CommonModule,
+
   ],
   providers: [
     ExperiencesService,
-    ProjectsService
+    ProjectsService,
   ],
 })
 export class WebsiteModule { }

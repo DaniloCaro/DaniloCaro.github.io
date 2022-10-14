@@ -2,7 +2,7 @@
   <div class="project-card">
     <a routerLink="/project/{{proj.title}}" routerLinkActive="active" ariaCurrentWhenActive="page">
       <div class="project-img">
-        <img [src]="proj.img" [alt]="proj.title" />
+        <img [src]="proj.imgsource.max600" [alt]="proj.title" />
       </div>
       <div class="project-info">
         <h3>{{ proj.title }}</h3>

@@ -10,7 +10,7 @@ const routerOptions: ExtraOptions = {
 const routes: Routes = [
   {
     path:'',
-    loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule)
+    loadChildren: () => import('./website/website.module').then(m => m.WebsiteModule),
   },
   {
     path:'**',
