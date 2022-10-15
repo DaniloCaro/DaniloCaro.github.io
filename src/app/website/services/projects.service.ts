@@ -15,7 +15,7 @@ export class ProjectsService {
   private project: ProjectApiInterface[] = [
     {
       "id": 3,
-      "img": "https://res.cloudinary.com/duwqd3zmr/image/upload/dpr_auto,q_auto/v1665797457/Portafolio/servicer_vwh3nf.webp",
+      "img": "./assets/img/projects-images/servicer/servicer.webp",
       "imgsource": {
         "max600": "./assets/img/projects-images/servicer/servicer(max-600).webp",
         "max992": "./assets/img/projects-images/servicer/servicer(max-992).webp",
@@ -37,7 +37,7 @@ export class ProjectsService {
     },
     {
       "id": 4,
-      "img": "https://res.cloudinary.com/duwqd3zmr/image/upload/dpr_auto,q_auto/v1665797423/Portafolio/cosmos_tgtkrg.webp",
+      "img": "./assets/img/projects-images/cosmos/cosmos.webp",
       "imgsource": {
         "max600": "./assets/img/projects-images/cosmos/cosmos(max-600).webp",
         "max992": "./assets/img/projects-images/cosmos/cosmos(max-992).webp",
@@ -61,7 +61,7 @@ export class ProjectsService {
     },
     {
       "id": 6,
-      "img": "https://res.cloudinary.com/duwqd3zmr/image/upload/dpr_auto,q_auto/v1665797429/Portafolio/creditcards_loycgu.webp",
+      "img": "./assets/img/projects-images/creditcards/creditcards.webp",
       "imgsource": {
         "max600": "./assets/img/projects-images/creditcards/creditcards(max-600).webp",
         "max992": "./assets/img/projects-images/creditcards/creditcards(max-992).webp",
@@ -84,7 +84,7 @@ export class ProjectsService {
     },
     {
       "id": 5,
-      "img": "https://res.cloudinary.com/duwqd3zmr/image/upload/dpr_auto,q_auto/v1665797416/Portafolio/chatboa_ik0ytu.webp",
+      "img": "./assets/img/projects-images/chatboa/chatboa.webp",
       "imgsource": {
         "max600": "./assets/img/projects-images/chatboa/chatboa(max-600).webp",
         "max992": "./assets/img/projects-images/chatboa/chatboa(max-992).webp",
@@ -107,7 +107,7 @@ export class ProjectsService {
     },
     {
       "id": 1,
-      "img": "https://res.cloudinary.com/duwqd3zmr/image/upload/dpr_auto,q_auto/v1665797452/Portafolio/platzi_afnkgz.webp",
+      "img": "./assets/img/projects-images/platziconf/platzi.webp",
       "imgsource": {
         "max600": "./assets/img/projects-images/platziconf/platzi(max-600).webp",
         "max992": "./assets/img/projects-images/platziconf/platzi(max-992).webp",
@@ -129,7 +129,7 @@ export class ProjectsService {
     },
     {
       "id": 2,
-      "img": "https://res.cloudinary.com/duwqd3zmr/image/upload/dpr_auto,q_auto/v1665797405/Portafolio/batatabit_decrjx.webp",
+      "img": "./assets/img/projects-images/batatabit/batatabit.webp",
       "imgsource": {
         "max600": "./assets/img/projects-images/batatabit/batatabit(max-600).webp",
         "max992": "./assets/img/projects-images/batatabit/batatabit(max-992).webp",
@@ -150,7 +150,7 @@ export class ProjectsService {
     },
     {
       "id": 7,
-      "img": "https://res.cloudinary.com/duwqd3zmr/image/upload/dpr_auto,q_auto/v1665797434/Portafolio/crudstudents_fv5efv.webp",
+      "img": "./assets/img/projects-images/crudstudents/crudstudents.webp",
       "imgsource": {
         "max600": "./assets/img/projects-images/crudstudents/crudstudents(max-600).webp",
         "max992": "./assets/img/projects-images/crudstudents/crudstudents(max-992).webp",
@@ -174,7 +174,7 @@ export class ProjectsService {
     },
     {
       "id": 8,
-      "img": "https://res.cloudinary.com/duwqd3zmr/image/upload/dpr_auto,q_auto/v1665797446/Portafolio/petcare_cil1tz.webp",
+      "img": "./assets/img/projects-images/petcare/petcare.webp",
       "imgsource": {
         "max600": "./assets/img/projects-images/petcare/petcare(max-600).webp",
         "max992": "./assets/img/projects-images/petcare/petcare(max-992).webp",
