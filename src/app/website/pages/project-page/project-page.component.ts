@@ -14,14 +14,19 @@ export class ProjectPageComponent implements OnInit {
 
   titleProject: any={};
   projectOnly:any ={};
+  public loading: boolean = true;
 
   constructor(private activatedRoute: ActivatedRoute, private _projectsService: ProjectsService,private router: Router) {
     this.activatedRoute.params.subscribe(params => {
+      this.loading = true;
       this.titleProject = params['title'];
       if (this._projectsService.getProject(this.titleProject) == undefined) {
         this.router.navigate(['/', 'home']);
       } else {
         this.projectOnly = this._projectsService.getProject(this.titleProject);
+        setTimeout(() => {
+          this.loading = false;
+        }, 1000);
       }
     });
   }
