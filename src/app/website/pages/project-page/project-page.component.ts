@@ -18,11 +18,12 @@ export class ProjectPageComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private _projectsService: ProjectsService,private router: Router) {
     this.activatedRoute.params.subscribe(params => {
       this.titleProject = params['title'];
-      if (this._projectsService.getProject(this.titleProject) == undefined) {
-        this.router.navigate(['/', 'home']);
-      } else {
-        this.projectOnly = this._projectsService.getProject(this.titleProject);
-      }
+      // if (this._projectsService.getProject(this.titleProject) == undefined) {
+      //   this.router.navigate(['/', 'home']);
+      // } else {
+      //   this.projectOnly = this._projectsService.getProject(this.titleProject);
+      // }
+      this.projectOnly = this._projectsService.getProject(this.titleProject);
     });
   }
 
