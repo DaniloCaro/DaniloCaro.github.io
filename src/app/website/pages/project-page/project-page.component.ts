@@ -20,11 +20,12 @@ export class ProjectPageComponent implements OnInit {
       this.titleProject = params['title'];
       if (this._projectsService.getProject(this.titleProject) == undefined) {
         this.router.navigate(['/', 'home']);
+      } else {
+        this.projectOnly = this._projectsService.getProject(this.titleProject);
       }
     });
   }
 
   ngOnInit(): void {
-    this.projectOnly = this._projectsService.getProject(this.titleProject);
   }
 }
