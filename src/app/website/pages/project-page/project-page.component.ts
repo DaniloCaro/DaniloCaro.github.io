@@ -12,22 +12,29 @@ import { ProjectApiInterface } from './../../interface/project-api.interface';
 })
 export class ProjectPageComponent implements OnInit {
 
-  titleProject: any={};
-  projectOnly:any ={};
-  public loading: boolean = true;
+  titleProject!: string;
+  projectOnly!:ProjectApiInterface[];
+  // public loading: boolean = true;
 
   constructor(private activatedRoute: ActivatedRoute, private _projectsService: ProjectsService,private router: Router) {
     this.activatedRoute.params.subscribe(params => {
-      this.loading = true;
+      // this.loading = true;
       this.titleProject = params['title'];
-      if (this._projectsService.getProject(this.titleProject) == undefined) {
-        this.router.navigate(['/', 'home']);
-      } else {
-        this.projectOnly = this._projectsService.getProject(this.titleProject);
-        setTimeout(() => {
-          this.loading = false;
-        }, 1000);
-      }
+
+      this._projectsService.getProjectObservable(this.titleProject).subscribe({
+        next:(data:ProjectApiInterface[])=>{
+          this.projectOnly = data;
+          if (this.projectOnly == undefined || this.projectOnly.length == 0) {
+            this.router.navigate(['/', 'not-found']);
+          }
+        },
+        error:(error)=>{
+          console.log(error);
+        },
+        complete:()=>{
+          console.log("getProjectsObservable completado");
+        }
+      });
     });
   }
 
