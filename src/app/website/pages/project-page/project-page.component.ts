@@ -24,16 +24,15 @@ export class ProjectPageComponent implements OnInit {
         next:(data:ProjectApiInterface[])=>{
           this.projectOnly = data;
           this.loading = true;
-          // Cambiar loading a false mientras se carga la imagen
+          if (this.projectOnly == undefined || this.projectOnly.length == 0) {
+            this.router.navigate(['/', 'not-found']);
+          }
           if (this.projectOnly[0].img) {
             const img = new Image();
             img.onload = () => {
               this.loading = false;
             }
             img.src = this.projectOnly[0].img;
-          }
-          if (this.projectOnly == undefined || this.projectOnly.length == 0) {
-            this.router.navigate(['/', 'not-found']);
           }
         },
         error:(error)=>{
