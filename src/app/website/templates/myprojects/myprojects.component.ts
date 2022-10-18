@@ -19,7 +19,9 @@ export class MyprojectsComponent implements OnInit {
     this._projectsService.getProjectsObservable().subscribe({
       next:(data:ProjectApiInterface[])=>{
         this.projects = data;
-        this.projects.sort((a,b)=>b.id-a.id);
+        this.projects.sort((a,b)=>{
+          return new Date(b.date).getTime() - new Date(a.date).getTime();
+        })
       },
       error:(error)=>{
         console.log(error);

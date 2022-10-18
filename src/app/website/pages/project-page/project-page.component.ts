@@ -15,22 +15,24 @@ export class ProjectPageComponent implements OnInit {
   titleProject!: string;
   projectOnly!:ProjectApiInterface[];
   public loading!: boolean;
+  public project!: boolean;
 
   constructor(private activatedRoute: ActivatedRoute, private _projectsService: ProjectsService,private router: Router) {
     this.activatedRoute.params.subscribe(params => {
       this.titleProject = params['title'];
-
       this._projectsService.getProjectObservable(this.titleProject).subscribe({
         next:(data:ProjectApiInterface[])=>{
           this.projectOnly = data;
           this.loading = true;
+          this.project = false;
           if (this.projectOnly == undefined || this.projectOnly.length == 0) {
-            this.router.navigate(['/', 'not-found']);
+            this.router.navigate(['/not-found']);
           }
-          if (this.projectOnly[0].img) {
+          else if (this.projectOnly[0].img) {
             const img = new Image();
             img.onload = () => {
               this.loading = false;
+              this.project = true;
             }
             img.src = this.projectOnly[0].img;
           }

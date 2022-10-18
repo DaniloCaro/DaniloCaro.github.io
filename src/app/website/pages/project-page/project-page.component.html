@@ -3,44 +3,46 @@
     <div class="lds-ripple"><div></div><div></div></div>
   </div>
 </ng-container>
-<div class="container">
-  <main class="project">
-    <div class="project__info">
-      <div class="project__title">
-        <h2>{{projectOnly[0].title}}</h2>
-        <span></span>
+<ng-container *ngIf="project">
+  <div class="container">
+    <main class="project">
+      <div class="project__info">
+        <div class="project__title">
+          <h2>{{projectOnly[0].title}}</h2>
+          <span></span>
+        </div>
+        <div class="project__info-container">
+          <strong>Periodo de Tiempo:</strong>
+          <span>{{projectOnly[0].date}}</span>
+        </div>
+        <div class="project__info-container">
+          <strong>Tipo de proyecto:</strong>
+          <span>{{projectOnly[0].type}}</span>
+        </div>
+        <div class="project__skill-container">
+          <span class="project__skill" *ngFor="let item of projectOnly[0].skills">{{ item }}</span>
+        </div>
+        <p>{{projectOnly[0].description}}</p>
       </div>
-      <div class="project__info-container">
-        <strong>Periodo de Tiempo:</strong>
-        <span>{{projectOnly[0].date}}</span>
+      <div class="project__btns">
+        <a class="btns" routerLink="/home">
+          <span class="project__icon--back"></span>
+          Regresar
+        </a>
+        <a class="btns" href="{{projectOnly[0].link}}" target="_blank">
+          <span class="project__icon"></span>
+          Abrir App
+        </a>
       </div>
-      <div class="project__info-container">
-        <strong>Tipo de proyecto:</strong>
-        <span>{{projectOnly[0].type}}</span>
+      <div class="project__img">
+        <picture>
+            <source srcset="{{projectOnly[0].imgsource.max600}}" media="(max-width: 600px)">
+            <source srcset="{{projectOnly[0].imgsource.max992}}" media="(max-width: 992px)">
+            <source srcset="{{projectOnly[0].imgsource.max1200}}" media="(max-width: 1200px)">
+            <source srcset="{{projectOnly[0].img}}">
+          <img src="{{projectOnly[0].imgsource.png}}" alt="{{projectOnly[0].title}}">
+        </picture>
       </div>
-      <div class="project__skill-container">
-        <span class="project__skill" *ngFor="let item of projectOnly[0].skills">{{ item }}</span>
-      </div>
-      <p>{{projectOnly[0].description}}</p>
-    </div>
-    <div class="project__btns">
-      <a class="btns" routerLink="/home">
-        <span class="project__icon--back"></span>
-        Regresar
-      </a>
-      <a class="btns" href="{{projectOnly[0].link}}" target="_blank">
-        <span class="project__icon"></span>
-        Abrir App
-      </a>
-    </div>
-    <div class="project__img">
-      <picture>
-          <source srcset="{{projectOnly[0].imgsource.max600}}" media="(max-width: 600px)">
-          <source srcset="{{projectOnly[0].imgsource.max992}}" media="(max-width: 992px)">
-          <source srcset="{{projectOnly[0].imgsource.max1200}}" media="(max-width: 1200px)">
-          <source srcset="{{projectOnly[0].img}}">
-        <img src="{{projectOnly[0].imgsource.png}}" alt="{{projectOnly[0].title}}">
-      </picture>
-    </div>
-  </main>
-</div>
+    </main>
+  </div>
+</ng-container>

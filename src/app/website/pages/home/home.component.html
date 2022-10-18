@@ -1,9 +1,16 @@
-<div class="container">
-  <app-hero></app-hero>
-  <app-menu></app-menu>
-  <div class="grid">
-    <app-experience></app-experience>
-    <app-myskills></app-myskills>
+<ng-container *ngIf="spinner">
+  <div class="spinner-container">
+    <div class="lds-ripple"><div></div><div></div></div>
   </div>
-  <app-myprojects></app-myprojects>
-</div>
+</ng-container>
+<ng-container *ngIf="website">
+  <div class="container">
+    <app-hero></app-hero>
+    <app-menu></app-menu>
+    <div class="grid">
+      <app-experience></app-experience>
+      <app-myskills></app-myskills>
+    </div>
+    <app-myprojects></app-myprojects>
+  </div>
+</ng-container>

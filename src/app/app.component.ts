@@ -6,5 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portafolio-hackathon';
+
+  public spinner!:boolean;
+  public website!:boolean;
+
+  constructor() {
+    this.spinner = true;
+    this.website = false;
+    window.addEventListener('load', () => {
+      this.spinner = false;
+      this.website = true;
+    }
+    );
+  }
 }

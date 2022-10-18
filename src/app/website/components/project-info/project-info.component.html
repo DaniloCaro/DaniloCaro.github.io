@@ -9,7 +9,7 @@
         <p>{{ proj.description }}</p>
         <div class="project-info__bottom">
           <span>{{proj.status}}</span>
-          <span>{{proj.date}}</span>
+          <span>{{proj.date | date:'mediumDate'}}</span>
         </div>
       </div>
     </a>
